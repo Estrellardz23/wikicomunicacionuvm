@@ -39,6 +39,8 @@ nav a {
 nav a:hover {
   text-decoration: underline;
 }
+
+
 .hero {
   background-image: url("../comumay.png"); 
   background-size: cover;
@@ -47,32 +49,36 @@ nav a:hover {
 
   color: white;
   text-align: center;
-  padding: 20px 10px;     
-  min-height: 120px;   
-  max-height: 160px;      
+  padding: 20px 10px;
+  min-height: 120px;
+  max-height: 160px;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  position: relative;
 }
 
-.hero h1 {
-  font-size: 1.5em;   
-  margin: 0;
-}
-
-.hero p {
-  font-size: 1em;         
-  margin: 5px 0 0;
-}
-
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.3); 
+  z-index: 0;
 }
 
 .hero h1, .hero p {
   position: relative;
   z-index: 1;
+  margin: 0;
 }
 
+.hero h1 {
+  font-size: 1.5em;
+}
 
+.hero p {
+  font-size: 1em;
+  margin-top: 8px;
 }
 
 section {
@@ -119,6 +125,7 @@ footer {
   padding: 20px;
   margin-top: 40px;
 }
+
 /* Formulario de contacto */
 .formulario-contacto {
   max-width: 600px;
