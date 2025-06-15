@@ -40,44 +40,26 @@ nav a:hover {
   text-decoration: underline;
 }
 
-
+/* ✅ Sección HERO con fondo */
 .hero {
-  background-image: url("../comumay.png"); 
-  background-size: cover;
+  background-image: url("comumay.png");  /* Asegúrate que el archivo esté en la raíz */
+  background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
+  background-color: #004080; /* color de fondo si la imagen no carga */
 
   color: white;
   text-align: center;
-  padding: 20px 10px;
-  min-height: 120px;
-  max-height: 160px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  position: relative;
-}
-
-.hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.3); 
-  z-index: 0;
-}
-
-.hero h1, .hero p {
-  position: relative;
-  z-index: 1;
-  margin: 0;
+  padding: 40px 20px;
 }
 
 .hero h1 {
-  font-size: 1.5em;
+  font-size: 1.8em;
+  margin: 0;
 }
 
 .hero p {
-  font-size: 1em;
+  font-size: 1.1em;
   margin-top: 8px;
 }
 
@@ -102,6 +84,7 @@ h1, h2 {
   border-radius: 12px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
   width: 300px;
+  text-align: center;
 }
 
 .boton {
