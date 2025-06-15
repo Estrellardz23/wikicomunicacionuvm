@@ -41,13 +41,12 @@ nav a:hover {
 }
 
 .hero {
-  background-image: url("../imagenes2/comumay.png");
+  background-image: url("../comumay.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  color: white;
-  padding: 60px 20px;
-  text-align: center;
+  min-height: 400px;
+  /* ... */
 }
 
 
