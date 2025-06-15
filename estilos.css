@@ -40,15 +40,15 @@ nav a:hover {
   text-decoration: underline;
 }
 
-.hero {
+hero {
   background-image: url("../comumay.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  min-height: 300px;
-  /* ... */
+  color: white;
+  padding: 60px 20px;
+  text-align: center;
 }
-
 
 section {
   padding: 40px 20px;
