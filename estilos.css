@@ -40,14 +40,18 @@ nav a:hover {
   text-decoration: underline;
 }
 
-hero {
-  background-image: url("../comumay.png");
+.hero {
+  background-image: url("../comumay.png");  
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   color: white;
-  padding: 60px 20px;
   text-align: center;
+  padding: 60px 20px;
+  min-height: 300px;  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 section {
