@@ -40,26 +40,31 @@ nav a:hover {
   text-decoration: underline;
 }
 .hero {
-  position: relative;
-  background-image: url("../comumay.png");
+  background-image: url("../comumay.png"); 
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+
   color: white;
   text-align: center;
-  padding: 60px 20px;
-  min-height: 250px;
+  padding: 20px 10px;     
+  min-height: 120px;   
+  max-height: 160px;      
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
-.hero::before {
-  content: "";
-  position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
-  background: rgba(0, 0, 0, 0.4); /* oscurece el fondo */
-  z-index: 0;
+.hero h1 {
+  font-size: 1.5em;   
+  margin: 0;
+}
+
+.hero p {
+  font-size: 1em;         
+  margin: 5px 0 0;
+}
+
 }
 
 .hero h1, .hero p {
