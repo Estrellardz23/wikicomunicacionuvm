@@ -39,14 +39,19 @@ nav a:hover {
   text-decoration: underline;
 }
 
-/* HERO SECTION con fondo, tamaño razonable y texto legible */
 .hero {
-  background-image: url("imagenes/comumay.png"); /* Asegúrate que esté en /imagenes */
-background-size: contain;
-background-position: center;
-background-repeat: no-repeat;
-height: 120px;
+  background-image: url("imagenes/comumay.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  color: white;
 }
+
 
 /* Capa oscura encima del fondo para que el texto se vea */
 .hero::before {
