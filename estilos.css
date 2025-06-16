@@ -1,4 +1,3 @@
-/* estilos.css */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -40,37 +39,46 @@ nav a:hover {
   text-decoration: underline;
 }
 
-/* SOLO esta parte fue ajustada */
+/* HERO con imagen de fondo más pequeña y texto visible */
 .hero {
-  background-image: url("imagenes/comumay.png");
-  background-size: cover;
-  background-position: center;
+  background-image: url("imagenes/comumay.png"); /* asegúrate de que esté en /imagenes */
+  background-size: contain;
   background-repeat: no-repeat;
-
-  color: white;
-  text-align: center;
-  padding: 20px 10px;
-  height: 120px;  /* Cambia este valor si quieres más o menos alto */
+  background-position: center;
+  background-color: #000; /* opcional si la imagen no ocupa todo el área */
+  
+  position: relative;
+  padding: 60px 20px;
+  min-height: 160px;
+  max-height: 180px;
+  
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
 }
 
-.hero h1 {
-  font-size: 1.5em;
-  margin: 0;
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 0;
 }
 
+.hero h1,
 .hero p {
-  font-size: 1em;
-  margin: 5px 0 0;
-}
-
-.hero h1, .hero p {
   position: relative;
   z-index: 1;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.8);
+  margin: 0.5em 0;
 }
 
+/* Secciones generales */
 section {
   padding: 40px 20px;
 }
@@ -79,11 +87,13 @@ h1, h2 {
   color: #004080;
 }
 
+/* Tarjetas */
 .tarjetas {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 30px;
   justify-content: center;
+  margin-top: 40px;
 }
 
 .tarjeta {
@@ -91,7 +101,8 @@ h1, h2 {
   padding: 20px;
   border-radius: 12px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  width: 300px;
+  width: 280px;
+  text-align: center;
 }
 
 .boton {
