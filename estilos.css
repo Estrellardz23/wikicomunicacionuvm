@@ -42,18 +42,10 @@ nav a:hover {
 /* HERO SECTION con fondo, tamaño razonable y texto legible */
 .hero {
   background-image: url("imagenes/comumay.png"); /* Asegúrate que esté en /imagenes */
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  position: relative;
-  padding: 60px 20px;
-  min-height: 200px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  color: white;
+background-size: contain;
+background-position: center;
+background-repeat: no-repeat;
+height: 120px;
 }
 
 /* Capa oscura encima del fondo para que el texto se vea */
