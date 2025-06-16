@@ -40,38 +40,35 @@ nav a:hover {
   text-decoration: underline;
 }
 
-/* 🔧 HERO corregido */
+/* SOLO esta parte fue ajustada */
 .hero {
   background-image: url("imagenes/comumay.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 
-  height: 180px; /* ⬅️ Ajusta esto si quieres más o menos altura */
-
+  color: white;
+  text-align: center;
+  padding: 20px 10px;
+  height: 120px;  /* Cambia este valor si quieres más o menos alto */
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-
-  text-align: center;
-  color: white;
-  position: relative;
 }
 
-.hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-color: rgba(0, 0, 0, 0.4); /* mejora la legibilidad */
-  z-index: 0;
+.hero h1 {
+  font-size: 1.5em;
+  margin: 0;
+}
+
+.hero p {
+  font-size: 1em;
+  margin: 5px 0 0;
 }
 
 .hero h1, .hero p {
   position: relative;
   z-index: 1;
-  text-shadow: 1px 1px 5px rgba(0,0,0,0.8);
-  margin: 0.3em 0;
 }
 
 section {
