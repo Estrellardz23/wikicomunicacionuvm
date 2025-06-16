@@ -2,7 +2,7 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f2f2f2;
+  background-color: #6699cc !important; /* azul cielo más oscuro pero suave */
   color: #333;
 }
 
@@ -39,35 +39,14 @@ nav a:hover {
   text-decoration: underline;
 }
 
-/* Solo ajustamos la altura de esta parte */
 .hero {
-  background-image: url("imagenes/comumay.png");
+  background-image: url("../imagenes2/comumay.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-
   color: white;
+  padding: 60px 20px;
   text-align: center;
-  padding: 20px 10px;
-  height: 120px;  /* Puedes bajarlo a 100px si aún se ve grande */
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.hero h1 {
-  font-size: 1.5em;
-  margin: 0;
-}
-
-.hero p {
-  font-size: 1em;
-  margin: 5px 0 0;
-}
-
-.hero h1, .hero p {
-  position: relative;
-  z-index: 1;
 }
 
 section {
