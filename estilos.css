@@ -1,11 +1,35 @@
+/* Fondo para TODAS las páginas */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f2f2f2;
   color: #333;
+  position: relative;
+  background-image: url("imagenes/comumay.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
+/* Capa oscura encima del fondo */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3); /* Opacidad ajustable */
+  z-index: -1;
+}
+
+/* Todo el contenido encima de la capa oscura */
+body * {
+  position: relative;
+  z-index: 1;
+}
+
+/* Encabezado */
 header {
   background-color: #004080;
   color: white;
@@ -39,56 +63,43 @@ nav a:hover {
   text-decoration: underline;
 }
 
+/* Hero - solo texto, sin imagen directa */
 .hero {
-  background-image: url("imagenes/comumay.png");
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
-  height: 120px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
   text-align: center;
+  padding: 60px 20px;
   color: white;
 }
 
-
-/* Capa oscura encima del fondo para que el texto se vea */
-.hero::before {
-  content: "";
-  position: absolute;
-  top: 0; left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.4); /* Oscurece el fondo */
-  z-index: 0;
+.hero h1 {
+  font-size: 2em;
+  margin: 0;
 }
 
-/* Texto encima del fondo */
-.hero h1,
 .hero p {
-  position: relative;
-  z-index: 1;
-  text-shadow: 1px 1px 4px rgba(0,0,0,0.8);
-  margin: 0.5em 0;
+  font-size: 1.2em;
+  margin: 10px 0 0;
 }
 
 /* Secciones generales */
 section {
   padding: 40px 20px;
+  background-color: rgba(255, 255, 255, 0.9);
+  margin: 20px;
+  border-radius: 12px;
 }
 
+/* Títulos */
 h1, h2 {
   color: #004080;
+  text-align: center;
 }
 
-/* Tarjetas centradas y bien separadas */
+/* Tarjetas */
 .tarjetas {
   display: flex;
   flex-wrap: wrap;
-  gap: 30px;
+  gap: 20px;
   justify-content: center;
-  margin-top: 40px;
 }
 
 .tarjeta {
@@ -96,8 +107,7 @@ h1, h2 {
   padding: 20px;
   border-radius: 12px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  width: 280px;
-  text-align: center;
+  width: 300px;
 }
 
 .boton {
@@ -114,6 +124,7 @@ h1, h2 {
   background-color: #003366;
 }
 
+/* Pie de página */
 footer {
   background-color: #004080;
   color: white;
@@ -122,7 +133,7 @@ footer {
   margin-top: 40px;
 }
 
-/* Formulario */
+/* Formulario de contacto */
 .formulario-contacto {
   max-width: 600px;
   margin: auto;
@@ -151,4 +162,14 @@ footer {
   border: 1px solid #ccc;
   border-radius: 8px;
   box-sizing: border-box;
+}
+
+/* Ajuste especial para evitar desbordes en foro.html */
+.foro-contenido {
+  max-width: 100%;
+  overflow: hidden;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
