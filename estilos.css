@@ -39,19 +39,15 @@ nav a:hover {
   text-decoration: underline;
 }
 
-/* HERO con imagen de fondo más pequeña y texto visible */
+/* HERO SECTION con fondo, tamaño razonable y texto legible */
 .hero {
-  background-image: url("imagenes/comumay.png"); /* asegúrate de que esté en /imagenes */
-  background-size: contain;
-  background-repeat: no-repeat;
+  background-image: url("imagenes/comumay.png"); /* Asegúrate que esté en /imagenes */
+  background-size: cover;
   background-position: center;
-  background-color: #000; /* opcional si la imagen no ocupa todo el área */
-  
+  background-repeat: no-repeat;
   position: relative;
   padding: 60px 20px;
-  min-height: 160px;
-  max-height: 180px;
-  
+  min-height: 200px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -60,16 +56,18 @@ nav a:hover {
   color: white;
 }
 
+/* Capa oscura encima del fondo para que el texto se vea */
 .hero::before {
   content: "";
   position: absolute;
   top: 0; left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.4); /* Oscurece el fondo */
   z-index: 0;
 }
 
+/* Texto encima del fondo */
 .hero h1,
 .hero p {
   position: relative;
@@ -87,7 +85,7 @@ h1, h2 {
   color: #004080;
 }
 
-/* Tarjetas */
+/* Tarjetas centradas y bien separadas */
 .tarjetas {
   display: flex;
   flex-wrap: wrap;
@@ -127,7 +125,7 @@ footer {
   margin-top: 40px;
 }
 
-/* Formulario de contacto */
+/* Formulario */
 .formulario-contacto {
   max-width: 600px;
   margin: auto;
